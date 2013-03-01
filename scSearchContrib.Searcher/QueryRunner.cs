@@ -84,7 +84,7 @@ namespace scSearchContrib.Searcher
                     }
                     totalResults = searchhits.Length;
                     if (end == 0 || end > searchhits.Length) end = totalResults;
-                    var resultCollection = searchhits.FetchResults(start, end);
+                    var resultCollection = searchhits.FetchResults(start, end - start);
                     SearchHelper.GetItemsFromSearchResult(resultCollection, items, showAllVersions);
                 }
             }
